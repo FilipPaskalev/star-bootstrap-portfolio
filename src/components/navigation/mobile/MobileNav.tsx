@@ -13,9 +13,11 @@ const MobileNav = () => {
 
   return (
     <div className="mobile-nav-container">
-      <Button variant="primary" onClick={handleShow} className="mobile-nav-button">
-        <FaBars className="icon" />
-      </Button>
+      {!show && (
+        <Button variant="primary" onClick={handleShow} className="mobile-nav-button">
+          <FaBars className="icon" />
+        </Button>
+      )}
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
