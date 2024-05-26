@@ -1,0 +1,54 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f6f8fa;
+  /* GitHub background color */
+  color: #24292e;
+  /* GitHub text color */
+}
+
+.mobile-nav-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1050;
+  /* Ensure it is above other elements */
+}
+
+.mobile-nav-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #0366d6;
+  /* GitHub primary button color */
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s;
+}
+
+.mobile-nav-button:hover {
+  background-color: #0056b3;
+  /* Darker primary color */
+}
+
+.mobile-nav-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(3, 102, 214, 0.5);
+}
+
+.icon {
+  font-size: 1.25rem;
+}
+
+/* Additional content styling */
+.content {
+  padding: 2rem;
+  margin-top: 3rem;
+  /* Add margin to ensure content appears below the nav */
+}
