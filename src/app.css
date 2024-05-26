@@ -1,0 +1,10 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f6f8fa;
+  /* GitHub background color */
+  color: #24292e;
+  /* GitHub text color */
+}

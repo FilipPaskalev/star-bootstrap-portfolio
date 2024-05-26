@@ -2,9 +2,9 @@
 import EBreakpoints from "../../enum/EBreakpoints";
 
 // Components
-import MobileNav from "./MobileNav";
-import SideNav from "./SideNav";
-import TopNav from "./TopNav";
+import MobileNav from "./mobile/MobileNav";
+import SideNav from "./side/SideNav";
+import TopNav from "./top/TopNav";
 
 type NavigationProps = {
   width: number;
