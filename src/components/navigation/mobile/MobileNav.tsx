@@ -9,21 +9,20 @@ import NavBrand from "../brand/NavBrand";
 const MobileNav = () => {
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const closeMenu = () => setShow(false);
+  const showMenu = () => setShow(true);
 
   const offcanvasTitle: string = "Menu";
-  const navBrandLabel: string = "Brand";
 
   return (
     <div className="mobile-nav-container d-flex justify-content-between align-items-center">
-      <NavBrand label={navBrandLabel} />
+      <NavBrand />
       {!show && (
-        <Button onClick={handleShow} className="mobile-nav-button">
+        <Button onClick={showMenu} className="mobile-nav-button">
           <FaBars />
         </Button>
       )}
-      <OverlayMenu show={show} handleClose={handleClose} title={offcanvasTitle}>
+      <OverlayMenu show={show} close={closeMenu} title={offcanvasTitle}>
         Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
         etc.
       </OverlayMenu>

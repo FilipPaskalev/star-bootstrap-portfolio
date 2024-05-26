@@ -3,14 +3,14 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 
 interface OverlayMenuProps {
   show: boolean;
-  handleClose: () => void;
+  close: () => void;
   title: string;
   children: React.ReactNode;
 }
 
-const OverlayMenu: FC<OverlayMenuProps> = ({ show, handleClose, title, children }) => {
+const OverlayMenu: FC<OverlayMenuProps> = ({ show, close, title, children }) => {
   return (
-    <Offcanvas show={show} onHide={handleClose} className="overlay-menu">
+    <Offcanvas show={show} onHide={close} className="overlay-menu">
       <Offcanvas.Header closeButton>
         <Offcanvas.Title>{title}</Offcanvas.Title>
       </Offcanvas.Header>
