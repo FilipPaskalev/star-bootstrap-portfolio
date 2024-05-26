@@ -1,9 +1,12 @@
 .mobile-nav-container {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1050;
-  /* Ensure it is above other elements */
+  background-color: rgb(32, 27, 32);
+  padding: 1rem;
+  height: 64px;
 }
 
 .mobile-nav-button {
@@ -35,9 +38,6 @@
   font-size: 1.25rem;
 }
 
-/* Additional content styling */
-.content {
-  padding: 2rem;
-  margin-top: 3rem;
-  /* Add margin to ensure content appears below the nav */
+.overlay-menu {
+  z-index: 1060;
 }

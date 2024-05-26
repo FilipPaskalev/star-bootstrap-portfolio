@@ -1,10 +1,11 @@
 import { Container, Navbar } from "react-bootstrap";
+import NavBrand from "../brand/NavBrand";
 
 const TopNav = () => {
   return (
     <Navbar className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
+        <NavBrand />
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>

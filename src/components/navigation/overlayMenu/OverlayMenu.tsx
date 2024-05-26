@@ -10,7 +10,7 @@ interface OverlayMenuProps {
 
 const OverlayMenu: FC<OverlayMenuProps> = ({ show, handleClose, title, children }) => {
   return (
-    <Offcanvas show={show} onHide={handleClose}>
+    <Offcanvas show={show} onHide={handleClose} className="overlay-menu">
       <Offcanvas.Header closeButton>
         <Offcanvas.Title>{title}</Offcanvas.Title>
       </Offcanvas.Header>
