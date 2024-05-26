@@ -8,8 +8,10 @@ import NavBrand from "../brand/NavBrand";
 
 const MobileNav = () => {
   const [show, setShow] = useState(false);
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   const offcanvasTitle: string = "Menu";
   const navBrandLabel: string = "Brand";
 
@@ -17,7 +19,7 @@ const MobileNav = () => {
     <div className="mobile-nav-container d-flex justify-content-between align-items-center">
       <NavBrand label={navBrandLabel} />
       {!show && (
-        <Button variant="primary" onClick={handleShow} className="mobile-nav-button">
+        <Button onClick={handleShow} className="mobile-nav-button">
           <FaBars />
         </Button>
       )}
