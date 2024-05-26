@@ -1,0 +1,25 @@
+.top-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  background-color: rgb(32, 27, 32);
+  height: 64px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:last-child {
+  margin-right: 0;
+}
+
+.nav-icon {
+  margin-right: 0.5rem;
+}

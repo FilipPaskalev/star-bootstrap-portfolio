@@ -2,10 +2,11 @@ enum EPagesPaths {
   PAGE_NOT_FOUND = "*",
   ERROR = "/error",
   COMING_SOON = "/coming-soon",
+  // Pages
   HOME = "/",
-  RESUME = "/resume",
+  CONTACT = "/contact",
   PROJECTS = "/projects",
-  Contact = "/contact"
+  RESUME = "/resume"
 }
 
 export default EPagesPaths;
