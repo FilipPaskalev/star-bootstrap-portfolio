@@ -1,0 +1,34 @@
+{
+  "pages": {
+    "comingSoon": {
+      "header": "Coming Soon"
+    },
+    "contact": {
+      "header": "Contact"
+    },
+    "error": {
+      "header": "Error"
+    },
+    "home": {
+      "header": "Home"
+    },
+    "notFound": {
+      "header": "Page Not Found"
+    },
+    "projects": {
+      "header": "Projects"
+    },
+    "resume": {
+      "header": "Resume"
+    }
+  },
+  "buttons": {},
+  "cards": {},
+  "headers": {},
+  "icons": {},
+  "links": {},
+  "navigation": {},
+  "navigationBrand": {},
+  "sections": {},
+  "sliders": {}
+}
