@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
-import Offcanvas from "react-bootstrap/Offcanvas";
 import { FaBars } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./mobile-nav.css"; // Import the custom CSS file for additional styling
+import OverlayMenu from "../overlayMenu/OverlayMenu"; // Import the renamed component
 
 const MobileNav = () => {
   const [show, setShow] = useState(false);
@@ -19,15 +19,10 @@ const MobileNav = () => {
         </Button>
       )}
 
-      <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Navigation</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
-          etc.
-        </Offcanvas.Body>
-      </Offcanvas>
+      <OverlayMenu show={show} handleClose={handleClose} title="Navigation">
+        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
+        etc.
+      </OverlayMenu>
     </div>
   );
 };
