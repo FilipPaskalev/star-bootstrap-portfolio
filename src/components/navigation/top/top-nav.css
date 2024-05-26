@@ -12,8 +12,14 @@
   color: white;
   text-decoration: none;
   margin-right: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .nav-link:last-child {
   margin-right: 0;
+}
+
+.nav-icon {
+  margin-right: 0.5rem;
 }
