@@ -2,5 +2,9 @@
   "selectLanguage": "Избери език",
   "close": "Затвори",
   "english": "Английски",
-  "bulgarian": "Български"
+  "bulgarian": "Български",
+  "home": "Начало",
+  "contact": "Свържи се",
+  "resume": "Резюме",
+  "projects": "Проекти"
 }
