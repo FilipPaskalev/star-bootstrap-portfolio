@@ -1,34 +1,6 @@
 {
-  "pages": {
-    "comingSoon": {
-      "header": "Очаквайте скоро"
-    },
-    "contact": {
-      "header": "Свържи се с мен"
-    },
-    "error": {
-      "header": "Грешка"
-    },
-    "home": {
-      "header": "Начало"
-    },
-    "notFound": {
-      "header": "Страницата не е открита"
-    },
-    "projects": {
-      "header": "Проекти"
-    },
-    "resume": {
-      "header": "Резюме"
-    }
-  },
-  "buttons": {},
-  "cards": {},
-  "headers": {},
-  "icons": {},
-  "links": {},
-  "navigation": {},
-  "navigationBrand": {},
-  "sections": {},
-  "sliders": {}
+  "selectLanguage": "Избери език",
+  "close": "Затвори",
+  "english": "Английски",
+  "bulgarian": "Български"
 }
