@@ -1,4 +1,4 @@
-.top-nav-bar {
+.top-nav-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,4 +22,6 @@
 
 .nav-icon {
   margin-right: 0.5rem;
+  font-size: 1.25rem;
+  /* Set a consistent size for the icons */
 }

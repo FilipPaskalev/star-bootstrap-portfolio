@@ -1,0 +1,34 @@
+.nav-brand-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.action-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-icon,
+.language-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.flag-icon,
+.btn-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 24px;
+  /* Set the width and height to ensure consistent size */
+  height: 24px;
+}
+
+.modal-btn {
+  margin-right: 0.5rem;
+}
+
+.btn-icon {
+  margin-right: 0.5rem;
+}
