@@ -4,13 +4,13 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-// Styles
-import "./nav-brand.css";
 // i18n translation
 import { useTranslation } from "react-i18next";
 // Icons
 import { US, BG } from "country-flag-icons/react/3x2";
 import { FaMoon, FaSun, FaLanguage } from "react-icons/fa";
+// Styles
+import "./nav-brand.css";
 
 type NavBrandProps = {
   children?: React.ReactNode;
