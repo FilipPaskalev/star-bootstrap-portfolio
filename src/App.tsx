@@ -7,7 +7,6 @@ import { getWindowSize } from "./utils/getWindowsSize";
 import WrapperPageContent from "./components/wrappers/pageContent/WrapperPageContent";
 import "./app.css";
 
-// prettier-ignore
 const App = () => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
@@ -16,21 +15,21 @@ const App = () => {
       setWindowSize(getWindowSize());
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
-  
+
   return (
     <>
-    <Navigation width={windowSize.width}/>
-    <WrapperPageContent>
-    <Routes>
-      <Route path={EPagesPaths.HOME} element={<PageHome />} />
-    </Routes>
-    </WrapperPageContent>
+      <Navigation width={windowSize.width} />
+      <WrapperPageContent>
+        <Routes>
+          <Route path={EPagesPaths.HOME} element={<PageHome />} />
+        </Routes>
+      </WrapperPageContent>
     </>
   );
 };
