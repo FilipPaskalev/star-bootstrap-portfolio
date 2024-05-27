@@ -14,7 +14,6 @@
   align-items: center;
   gap: 0.5rem;
   background-color: #0366d6;
-  /* GitHub primary button color */
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -26,7 +25,6 @@
 
 .mobile-nav-button:hover {
   background-color: #0056b3;
-  /* Darker primary color */
 }
 
 .mobile-nav-button:focus {
