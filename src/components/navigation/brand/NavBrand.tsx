@@ -30,8 +30,8 @@ const NavBrand = ({ children }: NavBrandProps) => {
     setShowModal(!showModal);
   };
 
-  const handleLanguageSelect = (language: string) => {
-    i18n.changeLanguage(language);
+  const selectLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
     toggleModal();
   };
 
@@ -51,11 +51,11 @@ const NavBrand = ({ children }: NavBrandProps) => {
           <Modal.Title>{t("selectLanguage")}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Button onClick={() => handleLanguageSelect("en")} className="modal-btn">
+          <Button onClick={() => selectLanguage("en")} className="modal-btn">
             <US title="United States" className="btn-icon" />
             {t("english")}
           </Button>
-          <Button onClick={() => handleLanguageSelect("bg")} className="modal-btn">
+          <Button onClick={() => selectLanguage("bg")} className="modal-btn">
             <BG title="Bulgaria" className="btn-icon" />
             {t("bulgarian")}
           </Button>

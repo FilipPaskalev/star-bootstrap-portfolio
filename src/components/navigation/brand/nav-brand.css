@@ -7,18 +7,19 @@
 .action-icons {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .theme-icon,
 .language-icon {
   font-size: 1.5rem;
   cursor: pointer;
+  color: white;
 }
 
 .flag-icon,
 .btn-icon {
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
   width: 24px;
   height: 24px;

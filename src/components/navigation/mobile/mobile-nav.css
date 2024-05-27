@@ -16,7 +16,7 @@
   background-color: #0366d6;
   border: none;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: bold;
   color: white;
   border-radius: 0.25rem;
@@ -30,10 +30,6 @@
 .mobile-nav-button:focus {
   outline: none;
   box-shadow: 0 0 0 0.2rem rgba(3, 102, 214, 0.5);
-}
-
-.icon {
-  font-size: 1.25rem;
 }
 
 .overlay-menu {
