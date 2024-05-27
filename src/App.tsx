@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import PageHome from "./components/pages/PageHome";
 import EPagesPaths from "./enum/EPagesPaths";
 import Navigation from "./components/navigation/Navigation";
-import { getWindowSize } from "./utils/getWindowsSize";
+import getWindowSize from "./utils/getWindowsSize";
 import WrapperPageContent from "./components/wrappers/pageContent/WrapperPageContent";
 import "./app.css";
 
