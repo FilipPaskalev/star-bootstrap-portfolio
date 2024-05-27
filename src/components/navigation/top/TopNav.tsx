@@ -1,10 +1,19 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
+// React-Bootstrap
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
+// Components
 import NavBrand from "../brand/NavBrand";
+// React-Router
 import { Link } from "react-router-dom";
+// React-Icons
 import { FaHome, FaEnvelope, FaFileAlt, FaProjectDiagram } from "react-icons/fa";
+// Enums
 import EPagesPaths from "../../../enum/EPagesPaths";
-import "./top-nav.css";
+// i18n
 import { useTranslation } from "react-i18next";
+// Styles
+import "./top-nav.css";
 
 const TopNav = () => {
   const { t } = useTranslation();
@@ -18,7 +27,7 @@ const TopNav = () => {
             <NavBrand />
             <Nav className="ms-auto">
               <Nav.Link as={Link} to={EPagesPaths.HOME} className="nav-link">
-                <FaHome className="nav-icon" /> {t("home")} {/* Use the 't' variable */}
+                <FaHome className="nav-icon" /> {t("home")}
               </Nav.Link>
               <Nav.Link as={Link} to={EPagesPaths.CONTACT} className="nav-link">
                 <FaEnvelope className="nav-icon" /> {t("contact")}
