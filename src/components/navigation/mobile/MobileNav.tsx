@@ -7,8 +7,8 @@ import { FaBars } from "react-icons/fa6";
 import OverlayMenu from "../overlayMenu/OverlayMenu";
 import NavBrand from "../brand/NavBrand";
 // Styles
-import "./mobile-nav.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./mobile-nav.css";
 
 const MobileNav = () => {
   const [show, setShow] = useState(false);
