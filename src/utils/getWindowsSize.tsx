@@ -3,7 +3,9 @@ type WindowSize = {
   height: number;
 };
 
-export const getWindowSize = (): WindowSize => {
+const getWindowSize = (): WindowSize => {
   const { innerWidth: width, innerHeight: height } = window;
   return { width, height };
 };
+
+export default getWindowSize;

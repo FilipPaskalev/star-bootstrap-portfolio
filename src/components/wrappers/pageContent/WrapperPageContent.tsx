@@ -1,6 +1,10 @@
 import "./wrapper-page-content.css";
 
-const WrapperPageContent = ({ children }: { children: React.ReactNode }) => {
+type WrapperPageContentProps = {
+  children: React.ReactNode;
+};
+
+const WrapperPageContent = ({ children }: WrapperPageContentProps) => {
   return <div className="content">{children}</div>;
 };
 

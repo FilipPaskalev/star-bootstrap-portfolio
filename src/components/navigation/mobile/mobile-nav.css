@@ -14,10 +14,9 @@
   align-items: center;
   gap: 0.5rem;
   background-color: #0366d6;
-  /* GitHub primary button color */
   border: none;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: bold;
   color: white;
   border-radius: 0.25rem;
@@ -26,16 +25,11 @@
 
 .mobile-nav-button:hover {
   background-color: #0056b3;
-  /* Darker primary color */
 }
 
 .mobile-nav-button:focus {
   outline: none;
   box-shadow: 0 0 0 0.2rem rgba(3, 102, 214, 0.5);
-}
-
-.icon {
-  font-size: 1.25rem;
 }
 
 .overlay-menu {

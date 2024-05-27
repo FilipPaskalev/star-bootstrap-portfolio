@@ -1,7 +1,4 @@
-// src/pages/Contact.tsx
-import React from "react";
-
-const Contact: React.FC = () => {
+const Contact = () => {
   return <h1>Contact Page</h1>;
 };
 
