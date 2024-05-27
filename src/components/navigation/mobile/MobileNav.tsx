@@ -1,10 +1,14 @@
 import { useState } from "react";
+// React-Bootstrap
 import Button from "react-bootstrap/Button";
+// Icons
 import { FaBars } from "react-icons/fa6";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./mobile-nav.css";
+// Components
 import OverlayMenu from "../overlayMenu/OverlayMenu";
 import NavBrand from "../brand/NavBrand";
+// Styles
+import "./mobile-nav.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const MobileNav = () => {
   const [show, setShow] = useState(false);
@@ -12,6 +16,7 @@ const MobileNav = () => {
   const closeMenu = () => setShow(false);
   const showMenu = () => setShow(true);
 
+  // TODO: i18n implementation
   const offcanvasTitle: string = "Menu";
 
   return (
