@@ -1,6 +1,4 @@
 import Container from "react-bootstrap/Container";
-import { Link } from "react-router-dom";
-import EPagesPaths from "../../../enum/EPagesPaths";
 import Navigation from "../../nav/Navigation";
 
 const Home = () => {
