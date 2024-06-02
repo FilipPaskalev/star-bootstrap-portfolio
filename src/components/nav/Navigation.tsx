@@ -1,16 +1,22 @@
-import { Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import EPagesPaths from "../../enum/EPagesPaths";
+import EBreakpoints from "../../enum/EBreakpoints";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
+import MobileNav from "./mobile/MobileNav";
+import SideNav from "./side/SideNav";
+import TopNav from "./top/TopNav";
+
+type TScreenSizeParams = {
+  width: number;
+  height: number;
+};
 
 const Navigation = () => {
-  return (
-    <Navbar bg="light" expand="lg">
-      <Link to={EPagesPaths.CONTACT}>Contact</Link>
-      <Link to={EPagesPaths.PROJECTS}>Projects</Link>
-      <Link to={EPagesPaths.RESUME}>Resume</Link>
-      <Link to={EPagesPaths.HOME}>Home</Link>
-    </Navbar>
-  );
+  const { width, height }: TScreenSizeParams = useWindowDimensions();
+
+  if (width < EBreakpoints.MD) return <MobileNav />;
+
+  if (width < EBreakpoints.XL) return <TopNav />;
+
+  return <SideNav />;
 };
 
 export default Navigation;
