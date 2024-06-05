@@ -1,4 +1,4 @@
-import { createHashRouter } from "react-router-dom";
+import { createHashRouter, Navigate } from "react-router-dom";
 import App, { appLoader } from "../App";
 import AboutMe, { aboutMeLoader } from "../pages/aboutMe/AboutMe";
 import Resume, { resumeLoader } from "../pages/resume/Resume";
@@ -7,6 +7,10 @@ import ContactMe, { contactMeLoader } from "../pages/contactMe/ContactMe";
 import ErrorPage from "../pages/errorPage/ErrorPage";
 
 const router = createHashRouter([
+  {
+    path: "/",
+    element: <Navigate to="/about-me" replace />, // Redirect from "/" to "/about-me"
+  },
   {
     path: "/",
     element: <App />,
