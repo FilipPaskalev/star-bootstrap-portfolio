@@ -1,13 +1,21 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "es5",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "ESNext",
     "skipLibCheck": true,
 
+    // From GitHub
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["node_modules/@types"],
+    "moduleResolution": "node" /* From  GitHub */,
+    // End of copy from GitHub
+
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    // "moduleResolution": "bundler", // Original - uncomment this line to use bundler mode
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
