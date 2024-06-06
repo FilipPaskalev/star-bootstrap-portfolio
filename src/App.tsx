@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
 import "./css/app.css";
-import Navigation from "./components/Navigation";
+import Navigation from "./components/navigations/Navigation";
 
+// Load data
 export const appLoader = async () => {
-  // Load necessary data
   return {
     /* data */
   };
