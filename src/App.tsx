@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import "./css/app.css";
+import Navigation from "./components/Navigation";
 
 export const appLoader = async () => {
   // Load necessary data
@@ -12,14 +13,13 @@ const App = () => {
   return (
     <div>
       <header>
-        <h1>My Website</h1>
-        {/* navigation */}
+        <Navigation />
       </header>
       <main>
         <Outlet />
       </main>
       <footer>
-        <p>© 2024 My Website</p>
+        <p>© 2024 Footer section</p>
       </footer>
     </div>
   );

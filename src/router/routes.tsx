@@ -9,7 +9,7 @@ import ErrorPage from "../pages/errorPage/ErrorPage";
 const router = createHashRouter([
   {
     path: "/",
-    element: <Navigate to="/about-me" replace />, // Redirect from "/" to "/about-me"
+    element: <Navigate to="/about-me" replace />,
   },
   {
     path: "/",
