@@ -1,44 +1,55 @@
 import { createHashRouter, Navigate } from "react-router-dom";
-import App, { appLoader } from "../App";
-import AboutMe, { aboutMeLoader } from "../pages/aboutMe/AboutMe";
-import Resume, { resumeLoader } from "../pages/resume/Resume";
-import Portfolio, { portfolioLoader } from "../pages/portfolio/Portfolio";
-import ContactMe, { contactMeLoader } from "../pages/contactMe/ContactMe";
+
+import App from "../App";
+import appDataLoader from "./appDataLoader";
+
+import HomePage from "../pages/home/HomePage";
+import homePageDataLoader from "../pages/home/homePageDataLoader";
+
+import ResumePage from "../pages/resume/ResumePage";
+import resumePageDataLoader from "../pages/resume/resumePageDataLoader";
+
+import PortfolioPage from "../pages/portfolio/PortfolioPage";
+import portfolioPageDataLoader from "../pages/portfolio/portfolioPageDataLoader";
+
+import ContactMePage from "../pages/contactMe/ContactMePage";
+import contactMePageDataLoader from "../pages/contactMe/contactMePageDataLoader";
+
 import ErrorPage from "../pages/errorPage/ErrorPage";
 
 const router = createHashRouter([
   {
     path: "/",
-    element: <Navigate to="/about-me" replace />,
+    element: <Navigate to="/home" replace />,
   },
   {
     path: "/",
     element: <App />,
-    loader: appLoader,
+    loader: appDataLoader,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "about-me",
-        element: <AboutMe />,
-        loader: aboutMeLoader,
+        path: "home",
+        element: <HomePage />,
+        loader: homePageDataLoader,
         errorElement: <ErrorPage />,
       },
       {
         path: "resume",
-        element: <Resume />,
-        loader: resumeLoader,
+        element: <ResumePage />,
+        loader: resumePageDataLoader,
         errorElement: <ErrorPage />,
       },
       {
         path: "portfolio",
-        element: <Portfolio />,
-        loader: portfolioLoader,
+        element: <PortfolioPage />,
+        loader: portfolioPageDataLoader,
         errorElement: <ErrorPage />,
       },
       {
         path: "contact-me",
-        element: <ContactMe />,
-        loader: contactMeLoader,
+        element: <ContactMePage />,
+        loader: contactMePageDataLoader,
         errorElement: <ErrorPage />,
       },
     ],

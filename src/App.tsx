@@ -1,27 +1,22 @@
-import { Outlet } from "react-router-dom";
-import "./css/app.css";
-import Navigation from "./components/navigations/Navigation";
-
-// Load data
-export const appLoader = async () => {
-  return {
-    /* data */
-  };
-};
+import { Outlet, useLoaderData } from "react-router-dom";
+import useBreakpoint from "./hooks/useBreakpoint";
+import Navigation from "./components/navigation/Navigation";
+import Footer from "./components/footer/Footer";
+import "./scss/app.scss";
+import MainContentWrapper from "./wrappers/MainContentWrapper";
 
 const App = () => {
+  const navLabel = useLoaderData() as string;
+  const breakpoint = useBreakpoint();
+
   return (
-    <div>
-      <header>
-        <Navigation />
-      </header>
-      <main>
+    <>
+      <Navigation brandLabel={navLabel} breakpoint={breakpoint} />
+      <MainContentWrapper breakpoint={breakpoint}>
         <Outlet />
-      </main>
-      <footer>
-        <p>© 2024 Footer section</p>
-      </footer>
-    </div>
+      </MainContentWrapper>
+      <Footer />
+    </>
   );
 };
 
