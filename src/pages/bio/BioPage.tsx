@@ -1,7 +1,15 @@
+import useBreakpoint from "../../hooks/useBreakpoint";
+import MainContentWrapper from "../../wrappers/mainContent/MainContentWrapper";
 import "./bio-page.scss";
 
 const BioPage = () => {
-  return <div>my bio page</div>;
+  const breakpoint = useBreakpoint();
+
+  return (
+    <MainContentWrapper breakpoint={breakpoint}>
+      mmy bio page
+    </MainContentWrapper>
+  );
 };
 
 export default BioPage;

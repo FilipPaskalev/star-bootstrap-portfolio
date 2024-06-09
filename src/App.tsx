@@ -3,7 +3,7 @@ import useBreakpoint from "./hooks/useBreakpoint";
 import Navigation from "./components/navigation/Navigation";
 import Footer from "./components/footer/Footer";
 import "./scss/app.scss";
-import MainContentWrapper from "./wrappers/MainContentWrapper";
+import MainContentWrapper from "./wrappers/mainContent/MainContentWrapper";
 
 const App = () => {
   const navLabel = useLoaderData() as string;

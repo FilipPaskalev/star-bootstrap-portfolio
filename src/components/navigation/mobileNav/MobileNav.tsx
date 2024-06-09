@@ -1,32 +1,32 @@
 import { useState } from "react";
-// Router
 import { Link } from "react-router-dom";
-// Components
-import Button from "react-bootstrap/Button";
-import Offcanvas from "react-bootstrap/Offcanvas";
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
-import Row from "react-bootstrap/Row";
-import SwitchThemeButton from "../../buttons/SwitchThemeButton";
-// Icons
+import {
+  Button,
+  Offcanvas,
+  Navbar,
+  Container,
+  Col,
+  Image,
+  Row,
+} from "react-bootstrap";
 import {
   FaAlignJustify,
-  FaBookBookmark,
   FaFacebookMessenger,
-  FaFileLines,
+  FaGitAlt,
   FaGithub,
   FaHouseUser,
   FaLaptopCode,
   FaPaperPlane,
-} from "react-icons/fa6";
-import { FaUserCheck, FaUserFriends } from "react-icons/fa";
+  FaUserCheck,
+  FaUserFriends,
+} from "react-icons/fa";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
-// Utils
 import EnumPaths from "../../../router/EnumPaths";
-// Styles
+import SwitchThemeButton from "../../buttons/SwitchThemeButton";
+import AVATAR from "../../../assets/avatar.png";
 import "./mobile-nav.scss";
+import { FaFileLines } from "react-icons/fa6";
+import { Menu } from "../menu/Menu";
 
 type TMobileNavProps = {
   brandLabel: string;
@@ -35,71 +35,30 @@ type TMobileNavProps = {
 const MobileNav = ({ brandLabel }: TMobileNavProps) => {
   const [show, setShow] = useState(false);
 
-  const followers: number = 7;
-  const following: number = 25;
-  const repos: number = 39;
+  // const followers = 7;
+  // const following = 25;
+  // const repos = 39;
 
   const closeMenu = () => setShow(false);
   const showMenu = () => setShow(true);
 
   return (
-    <Container fluid>
-      <Navbar>
+    <Navbar>
+      <Container className="d-flex justify-content-between align-items-center">
         <span>{brandLabel}</span>
-        <Button onClick={showMenu}>
+        <Button variant="outline-secondary" onClick={showMenu}>
           <FaAlignJustify />
         </Button>
-
-        <Offcanvas show={show} onHide={closeMenu}>
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title>{brandLabel}</Offcanvas.Title>
-          </Offcanvas.Header>
-          <Offcanvas.Body>
-            <Container>
-              <Image src="holder.js/100px250" fluid />
-              <Row>
-                <Col>
-                  <FaGithub />
-                </Col>
-                <Col>
-                  <TiSocialLinkedinCircular />
-                </Col>
-                <Col>
-                  <FaFacebookMessenger />
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <FaBookBookmark /> {repos} repositories
-                </Col>
-                <Col>
-                  <FaUserCheck />
-                  {following} following
-                </Col>
-                <Col>
-                  <FaUserFriends /> {followers} followers
-                </Col>
-              </Row>
-              <Container>
-                <Link to={EnumPaths.ABOUT_ME} onClick={closeMenu}>
-                  <FaHouseUser /> About Me
-                </Link>
-                <Link to={EnumPaths.BIO} onClick={closeMenu}>
-                  <FaFileLines /> Bio
-                </Link>
-                <Link to={EnumPaths.MY_WORK} onClick={closeMenu}>
-                  <FaLaptopCode /> My Work
-                </Link>
-                <Link to={EnumPaths.LETS_TALK} onClick={closeMenu}>
-                  <FaPaperPlane /> Lets Talk
-                </Link>
-              </Container>
-              <SwitchThemeButton />
-            </Container>
-          </Offcanvas.Body>
-        </Offcanvas>
-      </Navbar>
-    </Container>
+      </Container>
+      <Offcanvas show={show} onHide={closeMenu}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>{brandLabel}</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Menu closeMenu={closeMenu} />
+        </Offcanvas.Body>
+      </Offcanvas>
+    </Navbar>
   );
 };
 
