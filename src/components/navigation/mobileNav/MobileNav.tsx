@@ -9,6 +9,7 @@ import Row from "react-bootstrap/Row";
 import SwitchThemeButton from "../../buttons/SwitchThemeButton";
 import { Link } from "react-router-dom";
 import EnumPaths from "../../../router/EnumPaths";
+import { FaAlignJustify } from "react-icons/fa6";
 import "./mobile-nav.scss";
 
 type TMobileNavProps = {
@@ -25,11 +26,13 @@ const MobileNav = ({ brandLabel }: TMobileNavProps) => {
     <Container fluid>
       <Navbar>
         <h1>{brandLabel}</h1>
-        <Button onClick={showMenu}>{brandLabel}</Button>
+        <Button onClick={showMenu}>
+          <FaAlignJustify />
+        </Button>
 
         <Offcanvas show={show} onHide={closeMenu}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+            <Offcanvas.Title>{brandLabel}</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Container>
