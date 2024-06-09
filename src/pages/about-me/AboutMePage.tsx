@@ -1,9 +1,9 @@
 import { useLoaderData } from "react-router";
-import TProfileData from "../../types/TProfileData";
-import "./home-page.scss";
+import TypeProfileData from "../../types/TypeProfileData";
+import "./about-me-page.scss";
 
 const HomePage = () => {
-  const DATA = useLoaderData() as TProfileData;
+  const DATA = useLoaderData() as TypeProfileData;
 
   return (
     <section className="resume-section" id="about">

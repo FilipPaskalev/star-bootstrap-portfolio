@@ -7,8 +7,9 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import SwitchThemeButton from "../../buttons/SwitchThemeButton";
-import "./mobile-nav.scss";
 import { Link } from "react-router-dom";
+import EnumPaths from "../../../router/EnumPaths";
+import "./mobile-nav.scss";
 
 type TMobileNavProps = {
   brandLabel: string;
@@ -24,7 +25,7 @@ const MobileNav = ({ brandLabel }: TMobileNavProps) => {
     <Container fluid>
       <Navbar>
         <h1>{brandLabel}</h1>
-        <Button onClick={showMenu}>Launch</Button>
+        <Button onClick={showMenu}>{brandLabel}</Button>
 
         <Offcanvas show={show} onHide={closeMenu}>
           <Offcanvas.Header closeButton>
@@ -39,12 +40,20 @@ const MobileNav = ({ brandLabel }: TMobileNavProps) => {
                 <Col>followers</Col>
               </Row>
               <SwitchThemeButton />
-              <Link to="/home" onClick={closeMenu}>
-                About Me
-              </Link>
-              <Link to="/resume" onClick={closeMenu}>
-                My Resume
-              </Link>
+              <Container>
+                <Link to={EnumPaths.ABOUT_ME} onClick={closeMenu}>
+                  About Me
+                </Link>
+                <Link to={EnumPaths.BIO} onClick={closeMenu}>
+                  Bio
+                </Link>
+                <Link to={EnumPaths.MY_WORK} onClick={closeMenu}>
+                  My Work
+                </Link>
+                <Link to={EnumPaths.LETS_TALK} onClick={closeMenu}>
+                  Lets Talk
+                </Link>
+              </Container>
             </Container>
           </Offcanvas.Body>
         </Offcanvas>

@@ -1,55 +1,56 @@
 import { createHashRouter, Navigate } from "react-router-dom";
+import EnumPaths from "./EnumPaths";
+
+import ErrorPage from "../pages/errorPage/ErrorPage";
 
 import App from "../App";
 import appDataLoader from "./appDataLoader";
 
-import HomePage from "../pages/home/HomePage";
-import homePageDataLoader from "../pages/home/homePageDataLoader";
+import AboutMePage from "../pages/about-me/AboutMePage";
+import aboutMePageDataLoader from "../pages/about-me/aboutMePageDataLoader";
 
-import ResumePage from "../pages/resume/ResumePage";
-import resumePageDataLoader from "../pages/resume/resumePageDataLoader";
+import BioPage from "../pages/bio/BioPage";
+import bioPageDataLoader from "../pages/bio/bioPageDataLoader";
 
-import PortfolioPage from "../pages/portfolio/PortfolioPage";
-import portfolioPageDataLoader from "../pages/portfolio/portfolioPageDataLoader";
+import MyWorkPage from "../pages/myWork/MyWorkPage";
+import myWorkPageDataLoader from "../pages/myWork/myWorkPageDataLoader";
 
-import ContactMePage from "../pages/contactMe/ContactMePage";
-import contactMePageDataLoader from "../pages/contactMe/contactMePageDataLoader";
-
-import ErrorPage from "../pages/errorPage/ErrorPage";
+import LetsTalkPage from "../pages/letsTalk/LetsTalkPage";
+import letsTalkPageDataLoader from "../pages/letsTalk/letsTalkPageDataLoader";
 
 const router = createHashRouter([
   {
-    path: "/",
-    element: <Navigate to="/home" replace />,
+    path: EnumPaths.ROOT,
+    element: <Navigate to={EnumPaths.ABOUT_ME} replace />,
   },
   {
-    path: "/",
+    path: EnumPaths.ROOT,
     element: <App />,
     loader: appDataLoader,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "home",
-        element: <HomePage />,
-        loader: homePageDataLoader,
+        path: EnumPaths.ABOUT_ME,
+        element: <AboutMePage />,
+        loader: aboutMePageDataLoader,
         errorElement: <ErrorPage />,
       },
       {
-        path: "resume",
-        element: <ResumePage />,
-        loader: resumePageDataLoader,
+        path: EnumPaths.BIO,
+        element: <BioPage />,
+        loader: bioPageDataLoader,
         errorElement: <ErrorPage />,
       },
       {
-        path: "portfolio",
-        element: <PortfolioPage />,
-        loader: portfolioPageDataLoader,
+        path: EnumPaths.MY_WORK,
+        element: <MyWorkPage />,
+        loader: myWorkPageDataLoader,
         errorElement: <ErrorPage />,
       },
       {
-        path: "contact-me",
-        element: <ContactMePage />,
-        loader: contactMePageDataLoader,
+        path: EnumPaths.LETS_TALK,
+        element: <LetsTalkPage />,
+        loader: letsTalkPageDataLoader,
         errorElement: <ErrorPage />,
       },
     ],
