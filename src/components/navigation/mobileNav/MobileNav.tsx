@@ -1,4 +1,7 @@
 import { useState } from "react";
+// Router
+import { Link } from "react-router-dom";
+// Components
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Navbar from "react-bootstrap/Navbar";
@@ -7,9 +10,22 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import SwitchThemeButton from "../../buttons/SwitchThemeButton";
-import { Link } from "react-router-dom";
+// Icons
+import {
+  FaAlignJustify,
+  FaBookBookmark,
+  FaFacebookMessenger,
+  FaFileLines,
+  FaGithub,
+  FaHouseUser,
+  FaLaptopCode,
+  FaPaperPlane,
+} from "react-icons/fa6";
+import { FaUserCheck, FaUserFriends } from "react-icons/fa";
+import { TiSocialLinkedinCircular } from "react-icons/ti";
+// Utils
 import EnumPaths from "../../../router/EnumPaths";
-import { FaAlignJustify } from "react-icons/fa6";
+// Styles
 import "./mobile-nav.scss";
 
 type TMobileNavProps = {
@@ -19,13 +35,17 @@ type TMobileNavProps = {
 const MobileNav = ({ brandLabel }: TMobileNavProps) => {
   const [show, setShow] = useState(false);
 
+  const followers: number = 7;
+  const following: number = 25;
+  const repos: number = 39;
+
   const closeMenu = () => setShow(false);
   const showMenu = () => setShow(true);
 
   return (
     <Container fluid>
       <Navbar>
-        <h1>{brandLabel}</h1>
+        <span>{brandLabel}</span>
         <Button onClick={showMenu}>
           <FaAlignJustify />
         </Button>
@@ -38,25 +58,43 @@ const MobileNav = ({ brandLabel }: TMobileNavProps) => {
             <Container>
               <Image src="holder.js/100px250" fluid />
               <Row>
-                <Col>repos</Col>
-                <Col>stars</Col>
-                <Col>followers</Col>
+                <Col>
+                  <FaGithub />
+                </Col>
+                <Col>
+                  <TiSocialLinkedinCircular />
+                </Col>
+                <Col>
+                  <FaFacebookMessenger />
+                </Col>
               </Row>
-              <SwitchThemeButton />
+              <Row>
+                <Col>
+                  <FaBookBookmark /> {repos} repositories
+                </Col>
+                <Col>
+                  <FaUserCheck />
+                  {following} following
+                </Col>
+                <Col>
+                  <FaUserFriends /> {followers} followers
+                </Col>
+              </Row>
               <Container>
                 <Link to={EnumPaths.ABOUT_ME} onClick={closeMenu}>
-                  About Me
+                  <FaHouseUser /> About Me
                 </Link>
                 <Link to={EnumPaths.BIO} onClick={closeMenu}>
-                  Bio
+                  <FaFileLines /> Bio
                 </Link>
                 <Link to={EnumPaths.MY_WORK} onClick={closeMenu}>
-                  My Work
+                  <FaLaptopCode /> My Work
                 </Link>
                 <Link to={EnumPaths.LETS_TALK} onClick={closeMenu}>
-                  Lets Talk
+                  <FaPaperPlane /> Lets Talk
                 </Link>
               </Container>
+              <SwitchThemeButton />
             </Container>
           </Offcanvas.Body>
         </Offcanvas>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import useWindowWidth from "./useWindowWidth";
-import { BREAKPOINTS } from "../constants/breakpoints";
+import { BREAKPOINTS } from "../utils/constants/breakpoints";
 
 const useBreakpoint = (): string => {
   const windowWidth = useWindowWidth();

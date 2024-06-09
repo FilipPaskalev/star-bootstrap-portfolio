@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router";
-import TypeProfileData from "../../types/TypeProfileData";
+import TypeProfileData from "../../utils/types/TypeProfileData";
 import "./about-me-page.scss";
 
 const HomePage = () => {

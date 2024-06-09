@@ -1,5 +1,5 @@
 import DATA from "../../data/json/profile.json";
-import TypeProfileData from "../../types/TypeProfileData";
+import TypeProfileData from "../../utils/types/TypeProfileData";
 
 const aboutMePageDataLoader = async () => {
   console.log("Loading data for home page...");

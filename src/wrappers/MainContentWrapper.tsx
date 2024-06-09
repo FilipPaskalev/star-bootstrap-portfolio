@@ -1,4 +1,4 @@
-import { BREAKPOINTS } from "../constants/breakpoints";
+import { BREAKPOINTS } from "../utils/constants/breakpoints";
 import "./main-content-wrapper.scss";
 
 type TMainWrapperProps = {

@@ -1,4 +1,4 @@
-import { BREAKPOINTS } from "../../constants/breakpoints";
+import { BREAKPOINTS } from "../../utils/constants/breakpoints";
 import SideNav from "./sideNav/SideNav";
 import TopNav from "./topNav/TopNav";
 import MobileNav from "./mobileNav/MobileNav";
