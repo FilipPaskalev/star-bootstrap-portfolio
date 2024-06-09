@@ -8,6 +8,7 @@ import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import SwitchThemeButton from "../../buttons/SwitchThemeButton";
 import "./mobile-nav.scss";
+import { Link } from "react-router-dom";
 
 type TMobileNavProps = {
   brandLabel: string;
@@ -27,7 +28,7 @@ const MobileNav = ({ brandLabel }: TMobileNavProps) => {
 
         <Offcanvas show={show} onHide={closeMenu}>
           <Offcanvas.Header closeButton>
-            {/* <Offcanvas.Title>Offcanvas</Offcanvas.Title> */}
+            <Offcanvas.Title>Offcanvas</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Container>
@@ -38,6 +39,12 @@ const MobileNav = ({ brandLabel }: TMobileNavProps) => {
                 <Col>followers</Col>
               </Row>
               <SwitchThemeButton />
+              <Link to="/home" onClick={closeMenu}>
+                About Me
+              </Link>
+              <Link to="/resume" onClick={closeMenu}>
+                My Resume
+              </Link>
             </Container>
           </Offcanvas.Body>
         </Offcanvas>
