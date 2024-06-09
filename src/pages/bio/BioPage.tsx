@@ -1,17 +1,16 @@
+import EducationCard from "../../components/cards/EducationCard";
 import ExperienceCard from "../../components/cards/ExperienceCard";
-import useBreakpoint from "../../hooks/useBreakpoint";
-import MainContentWrapper from "../../wrappers/mainContent/MainContentWrapper";
 import "./bio-page.scss";
 
 const BioPage = () => {
-  const breakpoint = useBreakpoint();
-
   return (
-    <MainContentWrapper breakpoint={breakpoint}>
-      <h2>Experience</h2>
-
+    <>
+      <h2 className="mb-5">Experience</h2>
       <ExperienceCard />
-    </MainContentWrapper>
+      <hr className="my-3" />
+      <h2 className="my-5">Education</h2>
+      <EducationCard />
+    </>
   );
 };
 
