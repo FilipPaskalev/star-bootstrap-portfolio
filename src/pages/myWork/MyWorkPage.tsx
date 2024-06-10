@@ -1,27 +1,22 @@
 import ProjectsCarousel from "../../components/carousel/ProjectsCarousel";
-import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "./my-work-page.scss";
+import ProjectCard from "../../components/cards/ProjectCard";
 
 const MyWorkPage = () => {
+  const img: string = "https://placehold.co/120x60";
   return (
     <>
       <ProjectsCarousel />
-      <Row xs={1} md={2} lg={3} xxl={4} className="g-4">
+      <Row xs={1} md={2} lg={3} xxl={4} className="g-4 mt-5">
         {Array.from({ length: 9 }).map((_, idx) => (
           <Col key={idx}>
-            <Card>
-              <Card.Img variant="top" src="https://placehold.co/120x60" />
-              <Card.Body>
-                <Card.Title>Card title</Card.Title>
-                <Card.Text>
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </Card.Text>
-              </Card.Body>
-            </Card>
+            <ProjectCard
+              title="Project"
+              description="Mollit sint nisi exercitation sint esse fugiat reprehenderit eiusmod minim commodo enim reprehenderit in nulla."
+              imgSrc={img}
+            />
           </Col>
         ))}
       </Row>
