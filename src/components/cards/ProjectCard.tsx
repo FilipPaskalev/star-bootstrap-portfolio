@@ -22,7 +22,7 @@ const ProjectCard = ({ title, description, imgSrc, technologies }: Props) => {
           <strong>Used technologies</strong>
           <div>
             {technologies.map((tech, index) => (
-              <Badge key={index} pill className="mx-1">
+              <Badge key={index} className="mx-1">
                 {tech}
               </Badge>
             ))}
