@@ -16,7 +16,7 @@ Branch naming conventions in Git provide a systematic way to organize and refere
 Git imposes some basic restrictions on branch names:
 - **Characters**: Branch names can include letters, numbers, dashes (-), underscores (_), and dots (.).
 
-> [!WARNING]
+> [!CAUTION]
 > ```Branch names cannot begin with a dot or end with a slash (/)```
 
 - **Case Sensitivity**: Git is case-sensitive, so `Feature` and `feature` are considered different branches.
