@@ -8,11 +8,6 @@
   - [Git Branch Prefixes](#git-branch-prefixes)
     - [Additional Suitable Prefixes](#additional-suitable-prefixes)
   - [General Best Practices](#general-best-practices)
-  - [Examples](#examples)
-- [Creating a new feature branch](#creating-a-new-feature-branch)
-- [Switching to a bugfix branch](#switching-to-a-bugfix-branch)
-- [Creating a new release branch](#creating-a-new-release-branch)
-- [Preparing a hotfix](#preparing-a-hotfix)
 
 ## Understanding Git Branch Naming Conventions
 Branch naming conventions in Git provide a systematic way to organize and reference branches within a repository. These conventions are not enforced by Git itself but can be implemented through team policies or automated scripts. Effective branch naming is essential for clarity, especially in projects with multiple contributors.
@@ -89,18 +84,7 @@ Using prefixes in branch names is a popular strategy to categorize branches base
 > ### Be Consistent
 > Stick to the chosen conventions throughout the project for consistency.
 
-## Examples
-Here's how branch naming would appear in a terminal:
-
-```plaintext
-# Creating a new feature branch
-git checkout -b feature/add-user-authentication
-
-# Switching to a bugfix branch
-git checkout -b bugfix/login-issue
-
-# Creating a new release branch
-git checkout -b release/v2.0.0
-
-# Preparing a hotfix
-git checkout -b hotfix/reset-password-fix
+---
+<div align="center">
+  <em>Happy Coding! 🚀</em>
+</div>
