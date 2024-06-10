@@ -1,6 +1,7 @@
+@import "../../scss/global.scss";
+
 .left-pusher {
-  // margin-left: 17rem;
-  margin-left: 400px;
+  margin-left: $offcanvas-menu-width;
 }
 
 section.resume-section {
