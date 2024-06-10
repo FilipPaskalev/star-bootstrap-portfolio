@@ -1,7 +1,6 @@
 import { Container, Row, Image, Col } from "react-bootstrap";
 import { FaUserFriends } from "react-icons/fa";
 import {
-  FaFacebookMessenger,
   FaFileLines,
   FaGitAlt,
   FaGithub,
@@ -15,6 +14,8 @@ import EnumPaths from "../../../router/EnumPaths";
 import AVATAR from "../../../assets/avatar.png";
 import SwitchThemeButton from "../../buttons/SwitchThemeButton";
 import { Link } from "react-router-dom";
+import { BsEnvelopeAtFill } from "react-icons/bs";
+import "./menu.scss";
 
 type Props = {
   closeMenu?: () => void;
@@ -28,13 +29,29 @@ export const Menu = ({ closeMenu }: Props) => {
   return (
     <Container className="text-center">
       <Image src={AVATAR} className="avatar my-5 " roundedCircle fluid />
+      {/* <Figure>
+        <Figure.Image
+          className="avatar"
+          alt="171x180"
+          src={AVATAR}
+          roundedCircle
+        />
+      </Figure> */}
       <Row className="mb-3">
         <Col>
           <a href="">
             <FaGithub className="social-icon" />
           </a>
-          <TiSocialLinkedinCircular className="social-icon" />
-          <FaFacebookMessenger className="social-icon" />
+        </Col>
+        <Col>
+          <a href="">
+            <TiSocialLinkedinCircular className="social-icon" />
+          </a>
+        </Col>
+        <Col>
+          <a href="">
+            <BsEnvelopeAtFill className="social-icon" />
+          </a>
         </Col>
       </Row>
       <Row className="mb-4">

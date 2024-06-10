@@ -9,11 +9,11 @@ import "./side-nav.scss";
 // } from "react-icons/fa6";
 import { Menu } from "../menu/Menu";
 
-type TSideNavProps = {
+type TypeSideNavProps = {
   brandLabel: string;
 };
 
-const SideNav = ({ brandLabel }: TSideNavProps) => {
+const SideNav = ({ brandLabel }: TypeSideNavProps) => {
   return (
     <>
       <div className="side-bar">

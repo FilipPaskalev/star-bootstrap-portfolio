@@ -3,6 +3,7 @@ import TypeProfileData from "../../utils/types/TypeProfileData";
 
 const aboutMePageDataLoader = async () => {
   console.log("Loading data for home page...");
+
   return DATA as TypeProfileData;
 };
 
