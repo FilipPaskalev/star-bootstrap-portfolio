@@ -1,3 +1,5 @@
+@import "../../../scss//global.scss";
+
 .avatar {
   max-width: 10rem;
   max-height: 10rem;
@@ -11,4 +13,8 @@
 .social-icon {
   width: 48px;
   height: 48px;
+}
+
+#top-mobile-navbar  {
+  height: $top-navbar-height;
 }

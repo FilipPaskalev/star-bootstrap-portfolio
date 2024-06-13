@@ -43,7 +43,7 @@ const MobileNav = ({ brandLabel }: TMobileNavProps) => {
   const showMenu = () => setShow(true);
 
   return (
-    <Navbar>
+    <Navbar id="top-mobile-navbar">
       <Container className="d-flex justify-content-between align-items-center">
         <span>{brandLabel}</span>
         <Button variant="outline-secondary" onClick={showMenu}>

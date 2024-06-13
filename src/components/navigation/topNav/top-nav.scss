@@ -1,0 +1,9 @@
+@import "../../../scss/global.scss";
+
+#top-nav-bar {
+  height: $top-navbar-height;
+
+  a{
+    text-decoration: none;
+  }
+}

@@ -1,6 +1,9 @@
 import NavbarBrand from "react-bootstrap/NavbarBrand";
-import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/esm/Navbar";
+import { Link } from "react-router-dom";
+import EnumPaths from "../../../router/EnumPaths";
+import "./top-nav.scss";
 
 type TMobileNavProps = {
   brandLabel: string;
@@ -8,25 +11,27 @@ type TMobileNavProps = {
 
 const TopNav = ({ brandLabel }: TMobileNavProps) => {
   return (
-    <Container>
-      <Nav className="justify-content-end" activeKey="/home">
-        <NavbarBrand href="/home">{brandLabel}</NavbarBrand>
-        <Nav.Item>
-          <Nav.Link href="/home">Active</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-1">Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-2">Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="disabled" disabled>
-            Disabled
-          </Nav.Link>
-        </Nav.Item>
-      </Nav>
-    </Container>
+    <Navbar className="justify-content-between" id="top-nav-bar">
+      <Container>
+        <NavbarBrand>
+          <Link to={EnumPaths.ABOUT_ME}>{brandLabel}</Link>
+        </NavbarBrand>
+      </Container>
+      <Container className="justify-content-end">
+        <Link to={EnumPaths.ABOUT_ME} className="mx-2">
+          About Me
+        </Link>
+        <Link to={EnumPaths.BIO} className="mx-2">
+          Bio
+        </Link>
+        <Link to={EnumPaths.MY_WORK} className="mx-2">
+          My work
+        </Link>
+        <Link to={EnumPaths.LETS_TALK} className="mx-2">
+          Lets talk
+        </Link>
+      </Container>
+    </Navbar>
   );
 };
 
