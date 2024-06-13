@@ -2,11 +2,11 @@ import { useLoaderData } from "react-router";
 import TypeProfileData from "../../utils/types/TypeProfileData";
 import "./about-me-page.scss";
 // import MainContentWrapper from "../../wrappers/mainContent/MainContentWrapper";
-import useBreakpoint from "../../hooks/useBreakpoint";
+// import useBreakpoint from "../../hooks/useBreakpoint";
 
 const AboutMePage = () => {
   const DATA = useLoaderData() as TypeProfileData;
-  const breakpoint = useBreakpoint();
+  // const breakpoint = useBreakpoint();
 
   return (
     <>
